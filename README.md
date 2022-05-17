@@ -17,5 +17,5 @@ Jim Kwik
 
 ## Table of Contents
 
-[Jest]([https://github.com/jennerdulce/reading-notes/blob/master/Day-01.md](https://github.com/jennerdulce/LEARN-reading-notes/blob/main/jest/jest.md))
+[Jest](https://github.com/jennerdulce/LEARN-reading-notes/blob/main/jest/jest.md)
 
