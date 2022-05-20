@@ -97,6 +97,7 @@ describe('Array Rerverse', () => {
 - `yarn jest`
 
 ## Summary
+- open your directory
 - `yarn add jest`
 - `touch filename.test.js`
 ```javascript
