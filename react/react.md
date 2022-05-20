@@ -1,5 +1,7 @@
 # React
 
+-[Create a React Application Walkthrough](https://github.com/learn-academy-2022-charlie/Syllabus/blob/main/react/create-react-app.md)
+
 - JavaScript library for building user interfaces
     - Library: Collection of code snippets
 - React is used to build webpages, mobile web pages, and even native mobile applications. It is component based, which means that we use it to build many small parts, and then join them together to form entire applications. This turns out to be extremely scalable. It was created from Facebook as that application grew and became more dynamic.

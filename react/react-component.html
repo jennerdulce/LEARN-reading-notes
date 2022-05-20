@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <!-- HEAD CONTAINS METADATA: Bringing in dependencies, settings -->
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+  </head>
+  <body>
+
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+        class HelloReact extends React.Component{
+            render(){
+            return(
+                //   Make sure to house JSX in React Fragments <> </>
+                <>
+                    <h1>Hello React!</h1>
+                    <Content />
+                    <ImHungry />
+                    <ImHungry />
+                    <ImHungry />
+                    <ImHungry />
+                    <ImHungry />
+                </>
+            )
+            }
+        }
+
+        class Content extends React.Component{
+            render(){
+            return(
+                <>
+                    <h1>Title</h1>
+                    <p>This is app content.</p>
+                </>
+                )
+            }
+        }
+
+        class ImHungry extends React.Component{
+            render(){
+            return(
+                <>
+                    <h1>I WANT FOOD</h1>
+                </>
+                )
+            }
+        }
+        
+      const domContainer = document.querySelector('#react-container');
+    //   HelloReact is being Instantiated
+      ReactDOM.render(<HelloReact />, domContainer);
+    </script>
+  </body>
+</html>
