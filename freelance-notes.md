@@ -1,0 +1,37 @@
+- Whats good about contracting?
+- Good:
+    - Variety
+    - Flexibility
+    - I am the boss
+- Bad:
+    - Finding Work
+    - Limits of Work
+    - I am the boss
+- Recommendations:
+    - Get an accountant
+    - Socialize
+        - Connect with people without seeking something from them
+        - Don't try to sell you skills too hard
+        - Attend tech meetups
+        - Become an active member of the tech community
+        - Think through your rates
+            - Budget
+            - Think about how much you charge for your time
+            - Different rates for different types of companies
+            - Rate Calculation
+                - Factor in sick leave (2 weeks)
+                - Holiday Leave (4 weeks)
+                - Time between Contracts (6 weeks)
+                - Learning / Conference budge
+                - Taxes
+                - Retirement
+                - Health Insurance
+- Remote Working
+    - OVER COMMUNICATE
+    - Embrace Asynchronicity
+        - Be assertive
+        - Provide more context about scheduling meetings
+    - Build Routines
+    - Don't work from home
+    - Research visas
+    - Travel longer, smarter
