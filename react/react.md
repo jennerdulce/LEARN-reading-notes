@@ -166,3 +166,48 @@ class App extends Component{
 export default App
 
 ```
+
+
+## Functional Props
+
+```jsx
+someFunction = (item) => {
+  alert(item)
+}
+
+<OtherComponent someFunction={this.props.someFunction} />
+
+// In OtherComponent
+// WRONG EXAMPLE:
+// <button onClick={this.props.someFunction(item)}></button>
+// RIGHT EXMAPLE:
+<button onClick={() => {this.props.someFunction(item)}}></button>
+```
+
+## Conditional Rendering
+
+```jsx
+constructor(props){
+  super()
+  this.state = {
+    form: null
+  }
+}
+
+// Waits for form to have some sort of value
+ { this.state.form &&
+            <div>
+              <p>Pet name: { this.state.form.petName }</p>
+              <p>Type of pet: { this.state.form.petType}</p>
+              <p>Pet age: { this.state.form.petAge }</p>
+            </div>
+          }
+```
+
+## Component Did Mount
+```jsx
+compoentDidMount() {
+
+}
+- Executes during startup
+```
