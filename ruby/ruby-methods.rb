@@ -29,17 +29,17 @@ p add(100, 9)
 p add(1000, -999)
 
 # Challenge
-# password = 'hello'       
-# if password.include?('!') || password.include?('?')
-#     p 'password is good'
-# else
-#     p 'password is not good'
-# end
+password = 'hello'       
+if password.include?('!') || password.include?('?')
+    p 'password is good'
+else
+    p 'password is not good'
+end
 
-# require 'io/console'
+require 'io/console'
 
 
-# def password_challenge()
+# def password_challenge
 #     puts 'Enter a username:'
 #     username = gets.chomp
 #     puts 'Enter a password:'
@@ -60,9 +60,12 @@ p add(1000, -999)
 # end
 
 # password_challenge
-s = 'booboo'
-if s =~ /\d/         # Calling String's =~ method.
-    puts "The String '#{s}' has a number in it."
-  else
-    puts "The String '#{s}' does not have a number in it."
-  end
+# s = 'booboo'
+# if s =~ /\d/         # Calling String's =~ method.
+#     puts "The String '#{s}' has a number in it."
+#   else
+#     puts "The String '#{s}' does not have a number in it."
+#   end
+# p 'hello5' =~ /\d/
+# I like the conversation of the VDOM
+# Where he went about knowing what the DOM is and went into a discussion
