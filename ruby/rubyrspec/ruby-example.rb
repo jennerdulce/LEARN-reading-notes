@@ -1,10 +1,10 @@
 class Book
     attr_accessor :title, :author, :page
 
-    def initialize(author='anonymous')
+    def initialize(title, author='anonymous')
         @title = title
         @author = author
-        @page = 1
+        @page = 0
     end
 
     def turn_page num

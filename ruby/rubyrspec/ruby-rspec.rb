@@ -5,17 +5,17 @@
 # Requirements: Rspec file and Ruby file within a directory
 
 # Rspec Walkthrough
-# Similar to yarn install jest, you have to install the gym
-# The terminal command is: gem install rspec
-# After you run the terminal command, import `require rspec` near the top of your codebase
-# Also toward the top of you code base, Import the file you want to use with the keyword `require_relative 'filename'`
+# 1. Similar to yarn install jest, you have to install the gem
+# 2. The terminal command is: gem install rspec
+# 3. After you run the terminal command, import `require rspec` near the top of your codebase
+# 4. Also toward the top of you code base, Import the file you want to use with the keyword `require_relative 'filename'`
 # Test is very similar to Jest: describe, it, expect
 
 require 'rspec'
 require_relative 'ruby-example.rb'
 
 # Describe: Describe the test suite
-describe 'Book Method' do
+describe 'Book Object' do
     # it: Describe the test you will run
     it 'has to be real' do
         # expect: Run some code that retreives output and compare the output
@@ -60,6 +60,7 @@ describe 'Book Method' do
     # Action Test: Using a method
     it 'can turn a page' do
         my_book = Book.new
+
         expect{ my_book.turn_page(10).to change  { my_book.page }.from(0).to(10)}
     end
 
