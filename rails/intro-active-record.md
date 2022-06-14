@@ -63,6 +63,12 @@
 - `edit_instance = Schedule.find 1` or `edit_stance = Schedule.first`
 - `edit_stance.update day:'Monday', date:Date.today, event:'AR llecture'`
 
+- or
+
+- `last_person = Person.last`
+- `last_person.phone = 99999`
+- `last_person.save`
+
 # Delete
 
 - First target the instance of the table

@@ -120,8 +120,6 @@ end
     - `tacos.html.erb`
     - name should match the name of the controller
 
-
-
 - Model - Database / Brains
     - rails g new model ModelName one:datatype
 - View
