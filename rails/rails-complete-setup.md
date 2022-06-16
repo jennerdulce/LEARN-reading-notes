@@ -1,5 +1,11 @@
 # Complete Setup
 
+- WRRC
+    - REQUEST
+        - Action, Location
+    - Response
+        - Status Code, Payload
+
 ## Uploads the Rails app to Github
 
 - Create a empty new Repository on GitHub
@@ -7,15 +13,29 @@
 - `cd full-stack-rails`
 - `rails db:create`
 - `git remote add origin https://github.com/jennerdulce/ruby-fullstack-test.git`
-- `git checkout -b main`
+- `git checkout -b main`  ** THIS PART IS IMPORTANT**
 - `git add .`
 - `git commit -m "Initialization"`
 - `git push origin main`
 - `git checkout -b branch-name`
 
+## Setup RSpec
+
+- `bundle add rspec-rails`
+    - Interaacting with GEM file, (adding rspec-rails)
+- `rails generate rspec:install`
+    - Creates:
+    - `.rspec`
+    - `spec` directory
+- If you created your model before adding Rspec, you have to Create:
+    - spec > models > modelname_spec.rb
+- Write tests
+- Perform testing
+    - `rspec spec/rails/filename`
+
 ## Setup MVC
 
-## Model
+### Model
 
 - `rails g model Herb name:string watered:string`
     - Creates a migrate folder
@@ -26,23 +46,6 @@
 - `rails c`
     - Takes you into the rails console to be able to make changes
 - `Herb.create(name: 'Thyme', watered: 'no')`
-
-### View
-
-- Create Views
-- app > views > herb
-    - `index.html.erb`
-
-```ruby
-<h1>Herbs Project</h1>
-<ul>
-<% @herbs.each do |value| %>
-    <li><%= value.name %></li>
-<% end %>
-</ul>
-
-```
-- The `=` in ERB will DISPLAY on the page
 
 ### Controller
 
@@ -61,6 +64,37 @@ class HerbController < ApplicationController
 end
 ```
 
+### View
+
+- Create Views
+- app > views > herb
+    - `index.html.erb`
+
+```ruby
+<h1>Herbs Project</h1>
+<ul>
+<% @herbs.each do |value| %>
+    <li><%= value.name %></li>
+<% end %>
+</ul>
+
+```
+- The `=` in ERB will DISPLAY on the page
+
+#### Using Alias
+
+```ruby
+<ul>
+<% @herbs.each do |value| %>
+    <%= link_to value.name, show_path(value) %>
+<% end %>
+</ul>
+```
+
+### GENERATE ALL MVC
+
+- `rails g resource Student:string cohort:string`
+
 ### Route
 
 - Create Routes
@@ -74,9 +108,24 @@ end
 ```
 - Find the appropriate controller (herb) and calls the index method
 
-## Setup Spec
+#### Create Alias
 
-- 
+- config > routes
+```ruby
+Rails.application.routes.draw do
+  get '/' => 'herb#index'
+  get '/show/:id' => 'herb#show', as: 'show'
+end
+```
+
+- html.erb
+```ruby
+<ul>
+<% @herbs.each do |value| %>
+    <%= link_to value.name, show_path(value) %>
+<% end %>
+</ul>
+```
 
 ## Create a Migration
 
@@ -96,3 +145,38 @@ class ChangeNameOfDoorsToNumOfDoors < ActiveRecord::Migration[7.0]
 end
 ```
 - `rails db:migrate` to save these changes onto the DB
+- Refer to migration notes
+
+## PASSING TO ANOTHER
+
+- `rails db:create`
+- `rails db:migrate`
+- Create some data
+- bundle
+- yarn
+
+## Route Naming Conventions for CRUD actions
+
+- CRUD
+    - HTTP Verb
+        - Routes
+
+- Create
+    - Post
+        - Create
+- Read
+    - Get
+        - Index (all things)
+        - Show (one thing)
+        - New (form)
+        - Get (form)
+- Update
+    - Put
+        - Update
+    - Patch
+        - Update
+- Delete
+    - Delete
+        - Destory
+
+![Routes](./routes.png)
