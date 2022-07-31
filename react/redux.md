@@ -27,6 +27,20 @@
     - Responds with new state
     - State does not get modified, it just gets completely replaced
 
+## Objectives:
+- Create boilerplate
+- Create Types
+- Create Actions
+- Create Reducer
+    - Create initial state
+    - Create switch cases
+- Connect components to React-redux
+    - import connect
+    - import actions
+    - mapStateToProps
+    - export default conenct
+    - Refer to state as `props.property`
+
 ## Start
 - `create-react-app appname`
 - `cd appname`
@@ -144,3 +158,29 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, { fetchPosts })(Post)
 ```
 
+## FLOW:
+- From a component, A component triggers an action
+- Actions live in their respecitve js file
+- Actions dispatch payloads -> Reducers
+- Reducers trigger based on what action provided
+    - Reducers have their own state
+    - Reducers is where state is updated
+    - Returns an object to the index.js reducer
+- the index.js root reducer contains all of the state of all components
+- state is accessed by what is inside combineReducers
+
+```js
+export default combineReducers({
+    posts: postReducer
+})
+
+const initialState = {
+    items: [],
+    item: {}
+}
+
+
+// Within a component
+// state.posts.items
+// state.posts.item
+```

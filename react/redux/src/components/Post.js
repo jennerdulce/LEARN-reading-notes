@@ -4,11 +4,13 @@ import { fetchPosts } from '../actions/postActions'
 import PropTypes from 'prop-types'
 
 function Post(props) {
+    
     useEffect(() => {
         props.fetchPosts();
     }, [])
 
     useEffect(() => {
+        console.log("NEW POST ADDED")
         props.posts.unshift(props.newPost)
     }, [props.newPost])
 
