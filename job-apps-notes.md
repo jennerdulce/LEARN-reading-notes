@@ -6,3 +6,19 @@
 
 - flowstate:
 - 
+
+- What make someone successful in the role
+- 30, 60, 90 days
+- qualities within a candidate
+- what deterines success
+- timeline of this job position from training to job
+
+
+- how to reaach out without looking desperate
+    - connect with people withing dept or team you want to work with
+
+- show achievements as well as mistakes and growth periods
+    - shows that you are humble
+- MUST do research into the company
+- gramatical errors in resume
+- Search up top interview questions for all topics

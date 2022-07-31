@@ -10,6 +10,8 @@
 
 - Create a empty new Repository on GitHub
 - `rails new full-stack-rails -d postgresql -T`
+    - -d changes database
+    - -T removes default testing
 - `cd full-stack-rails`
 - `rails db:create`
 - `git remote add origin https://github.com/jennerdulce/ruby-fullstack-test.git`
@@ -35,6 +37,23 @@
 
 ## Setup MVC
 
+### SEED
+
+- build migration first then `rails db:seed`
+- order
+    - rails db:create
+    - rails db:migrate
+    - rails db:seed
+
+### Scaffold
+
+- Replaces model and controller or resource
+- `rails g scaffold ModelName column1:datatype`
+    - builds front end as well
+- `rails g scaffold ModelName column1:datatype --api`
+    - only builds back end
+- generates tests, controllers, tables, etc
+
 ### Model
 
 - `rails g model Herb name:string watered:string`
@@ -43,6 +62,7 @@
 - `rails db:migrate`
     - db > migrate
     - Creates a table for the model
+    - run this command everytime you alter the database template
 - `rails c`
     - Takes you into the rails console to be able to make changes
 - `Herb.create(name: 'Thyme', watered: 'no')`
@@ -147,14 +167,30 @@ end
 - `rails db:migrate` to save these changes onto the DB
 - Refer to migration notes
 
-## PASSING TO ANOTHER
+## PASSING TO ANOTHER DEVELOPER
 
 - `rails db:create`
 - `rails db:migrate`
-- Create some data
+- Create some data / Add data to DB
 - bundle
 - yarn
 
+## Reactstrap / Bootstrap
+
+- `yarn add bootstrap`
+- `yarn add reactstrap`
+- src > index.js
+    - `import 'bootstrap/dist/css/bootstrap.min.css'`
+
+## React Router DOM
+
+- `yarn add react-router-dom@5.3.3`
+- src > App.js
+    - `import { Router as Router, Route, Switch } from 'react-router-dom'`
+
+## Fetch
+    - pending fulfilled resolved
+ 
 ## Route Naming Conventions for CRUD actions
 
 - CRUD

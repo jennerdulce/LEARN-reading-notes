@@ -8,6 +8,10 @@ function Post(props) {
         props.fetchPosts();
     }, [])
 
+    useEffect(() => {
+        props.posts.unshift(props.newPost)
+    }, [props.newPost])
+
     const postItems = props.posts.map(post => (
         <div key={post.id}>
             <h3>{post.title}</h3>
@@ -29,7 +33,8 @@ function Post(props) {
 // }
 
 const mapStateToProps = state => ({
-    posts: state.posts.items
+    posts: state.posts.items,
+    newPost: state.posts.item
 })
 
 export default connect(mapStateToProps, { fetchPosts })(Post)
