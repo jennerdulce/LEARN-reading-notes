@@ -9,9 +9,11 @@ class CatIndex extends Component {
         return (
             <div>
                 <h1>Cat Index</h1>
+                {/* Conditional Rendering */}
                 {cats && 
-                    cats.map(cat => {
-                    return <Card>
+                    cats.map((cat, index) => {
+                        // Card from React Strap **NOT REACT BOOTSTRAP**
+                    return <Card key={index}>
                         <CardImg top width="100%" src={cat.image} alt="Card image cap" />
                         <CardBody>
                         <CardTitle>{cat.name}</CardTitle>

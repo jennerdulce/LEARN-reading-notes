@@ -18,6 +18,10 @@ class App extends Component {
     }
   }
 
+  createCat = (cat) => {
+    console.log(cat)
+  }
+
   render() {
 
     return (
@@ -27,6 +31,7 @@ class App extends Component {
         <Header />
           <Switch>
             <Route exact path="/" component={Home} />
+            {/* Syntax of using React Router DOM and passing props */}
             <Route path="/catindex" render={(props) => <CatIndex cats={this.state.cats}/>} />
             <Route path="/catshow/:id"
             render={(props) => {
@@ -35,7 +40,12 @@ class App extends Component {
               return <CatShow cat={cat} />
             }}
             />
-            <Route path="/catnew" component={CatNew} />
+            {/* <Route path="/catnshow" component={CatShow} />  ** OLD ROUTE***/} 
+            <Route
+              path="/catnew"
+              render={(props) => <CatNew createCat={this.createCat} />}
+            />
+            {/* <Route path="/catnew" component={CatNew} /> */}
             <Route path="/catedit" component={CatEdit} />
             <Route component={NotFound}/>
           </Switch>
